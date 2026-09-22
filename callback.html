@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>okaeshiya-poster: signing in…</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;max-width:640px;margin:60px auto;padding:0 20px;line-height:1.7;color:#222}</style>
+</head>
+<body>
+<h1>okaeshiya-poster</h1>
+<p id="msg">TikTok のログインを確認しています… / Completing TikTok sign-in…</p>
+<p><a id="link" href="#">続行しない場合はこちらをクリック / Click here if you are not redirected</a></p>
+<script>
+  // TikTok Login Kit (Web) redirects here. Forward the authorization result to the local app
+  // running on this computer. Nothing is stored on this page.
+  var target = "http://127.0.0.1:8790/callback" + window.location.search;
+  document.getElementById("link").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
